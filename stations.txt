@@ -1,4 +1,4 @@
-NPO Radio 1 NL | http://icecast.omroep.nl/radio1-sb-mp3
+Easy Hits Florida | http://airspectrum.cdnstream1.com:8114/1648_128
 Rainwave Chiptune | http://icecast.omroep.nl/radio1-sb-mp3
 Ibiza Global Radio | http://icecast.omroep.nl/radio1-sb-mp3
 No-Life Radio | http://icecast.omroep.nl/radio1-sb-mp3
