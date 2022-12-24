@@ -12,7 +12,7 @@ import subprocess
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])    
-def hello_world(name='McGreg FM', volume = 50):
+def hello_world(name='McGreg FM',volume =50): #volume =50
     # get file pointer to sender list
     stations = []
     stationURLs = []
@@ -45,9 +45,12 @@ def hello_world(name='McGreg FM', volume = 50):
         #p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
         #position = p.stdout.read()
 
-        position = mpcCommand(['mpc', '-f', '%position'])
+        position = mpcCommand(['mpc', '-f', '%position%'])
+        #print(position.decode('utf8').split('['))
+        #   ['2\n', 'playing] #2/6   0:11/0:00 (0%)\nvolume: 47%   repeat: off   random: off   single: off   consume: off\n']
         idx = position.decode('utf8').split('[')
         position = idx[0].strip()
+        #print(position)
 
         if isInteger(position) == False:
             position = 0
@@ -61,7 +64,7 @@ def hello_world(name='McGreg FM', volume = 50):
         
         
     volume = mpcCommand(['mpc', 'volume'])    
-
+    #print('Volume'+ str(volume))
     return render_template(templateFile, name=name, stations=stationOutput.strip(), volume=volume)    
 
 if __name__ == '__main__': 

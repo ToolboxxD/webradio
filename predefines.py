@@ -12,5 +12,7 @@ def isInteger(s):
 		return False
 
 def mpcCommand(cmd):
-	p = subprocess.Popen(cmd,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	return	p.stdout.read()
+	p = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	pOutput = p.stdout.read()
+	print('inMpcCommand ' + str(pOutput))
+	return	pOutput
