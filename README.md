@@ -29,20 +29,18 @@ Once you have activated your programming environment, install Flask:
 
 first install a player on your system 
 
-$ sudo apt-get update
-
-$ sudo apt-get install mpd mpc
-
-$ mpc add #linktostream
-https://www.internet-radio.com/ link für streams in pls datei 
-
-MPD wurde als unpraktisch empfungen 
-
-pip install python-vlc
+    $ sudo apt-get update
 
 Install VLC Player
+
     $ sudo apt-get install vlc 
 
-   Run the app:
+Install Vlc Python
 
-$  python radio.py           
+    pip install python-vlc
+
+https://www.internet-radio.com/ link für streams in pls datei 
+
+Run the app:
+
+    $  python radio.py           
