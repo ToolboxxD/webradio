@@ -2,7 +2,7 @@
 
 Check python version:
 
-python --version
+    $ python --version
 
 
 Virtual environments (shortened as "virtualenv") separate our new project’s Python dependencies from our other projects and from the Python libraries our operating system uses. If you don’t use a virtualenv, there’s a good chance you might break part of your OS. Start a new project with virtualenv:
