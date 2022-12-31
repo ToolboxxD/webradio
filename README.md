@@ -7,24 +7,25 @@ python --version
 
 Virtual environments (shortened as "virtualenv") separate our new project’s Python dependencies from our other projects and from the Python libraries our operating system uses. If you don’t use a virtualenv, there’s a good chance you might break part of your OS. Start a new project with virtualenv:
 
-$ python -m venv webradio (not needed)
+    $ python -m venv webradio 
 
-$ pip install virtualenv
+Alternative ist (not needed)
 
-$ virtualenv webradio
+    $ pip install virtualenv
+
+    $ virtualenv webradio
 
 To begin using the virtual environment, it needs to be activate
 
-$ source webradio/bin/activate
+    $ source webradio/bin/activate
 
  If you are done working in the virtual environment for the moment, you can deactivate it:
 
-$ deactivate
-
+    $ deactivate
 
 Once you have activated your programming environment, install Flask:
 
-$ pip install flask
+    $ pip install flask
 
 first install a player on your system 
 
@@ -35,17 +36,13 @@ $ sudo apt-get install mpd mpc
 $ mpc add #linktostream
 https://www.internet-radio.com/ link für streams in pls datei 
 
-$ mpc playlist 
+MPD wurde als unpraktisch empfungen 
 
-    mpc commands:
-    mpc ... 
-            play <NUM>
-            stop
-            corp (del all exept playing)
-            status 
-            clear
+pip install python-vlc
 
+Install VLC Player
+    $ sudo apt-get install vlc 
 
    Run the app:
 
-$  python webradio.py           
+$  python radio.py           

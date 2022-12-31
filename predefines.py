@@ -1,4 +1,5 @@
-import subprocess
+import subprocess 
+from subprocess import Popen, PIPE
 
 host = '0.0.0.0'
 port = 1234
@@ -11,8 +12,3 @@ def isInteger(s):
 	except ValueError:
 		return False
 
-def mpcCommand(cmd):
-	p = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	pOutput = p.stdout.read()
-	print('inMpcCommand ' + str(pOutput))
-	return	pOutput
